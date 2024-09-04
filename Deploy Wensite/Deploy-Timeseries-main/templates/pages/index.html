@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+{% include "includes/head.html" %}
+
+<body>
+    {% include "components/navbar.html" %}
+    <div class="container" id="content">
+        <div class="card mt-5 mx-auto" style="max-width: 400px;">
+            <div class="card-body">
+                <div class="card-title">
+                    <h1 class="text-center">Prediksi Suhu Udara</h1>
+                </div>
+                <form class="mt-4 d-flex justify-content-center align-items-center flex-column"
+                    enctype="multipart/form-data" hx-post="/" hx-trigger="submit" hx-swap="outerHTML"
+                    hx-target="#result" hx-indicator="#progress">
+                    <div class="form-group text-center">
+                        <label for="future_days">Jumlah Hari Prediksi</label>
+                        <input type="number" class="form-control" name="future_days" min="1" placeholder="Masukkan jumlah hari">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Prediksi</button>
+                </form>
+            </div>
+        </div>
+        <p id="progress" class="htmx-indicator spinner"></p>
+        <div id="result"></div>
+    </div>
+
+    {% include "includes/script.html" %}
+</body>
+
+</html>

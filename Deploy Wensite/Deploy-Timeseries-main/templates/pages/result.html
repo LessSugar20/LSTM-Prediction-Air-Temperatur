@@ -1,0 +1,21 @@
+<div class="container mt-4" id="result">
+    <div class="row text-center">
+
+
+        <div class="col-12 mt-4">
+            <h4>Prediksi dengan Data Asli</h4>
+            <img src="{{ combined_image_path }}" alt="Combined Forecasting and Original Data" class="img-fluid mt-3">
+        </div>
+
+        <!-- Display the forecast image -->
+        <p>Suhu Udara untuk
+            <strong>{{ future_days }}</strong>
+            hari ke depan adalah
+            <strong>{{ forecast }}</strong>°C
+        </p>
+        <img src="{{ image_path }}" alt="Forecasting" class="img-fluid mt-3">
+
+        <!-- Display the combined original and forecast plot -->
+
+    </div>
+</div>
